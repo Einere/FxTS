@@ -22,7 +22,7 @@ export const FuncParameters = {
   text: "## Parameters",
   skip: (index: number, splited: string[]) => {
     for (let i = index + 1; i < splited.length; i++) {
-      if (splited[i] === "## Example") {
+      if (splited[i].startsWith("## Example")) {
         return i - index;
       }
     }
